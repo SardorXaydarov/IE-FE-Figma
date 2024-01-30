@@ -89,6 +89,11 @@ body {
     margin: 0 auto;
 }
 
+.header {
+    border-bottom: 1px solid var(--grey-divider, #DDD);
+    background: var(--white, #FFF);
+}
+
 .header .container {
     display: flex;
     align-items: center;
@@ -405,7 +410,7 @@ body {
 }
 
 
-#sale-time{
+#sale-time {
     color: red;
     background: #fff;
     padding: .5rem 1rem;
@@ -414,14 +419,327 @@ body {
 
 
 /* Category.html css */
-.category{
+.category {
     margin-top: 116px !important;
 }
-.category .categories-card{
+
+.category .categories-card {
     width: 248px;
 }
 
-.category .categories-card img{
+.category .categories-card img {
     width: 248px;
     height: 274.68px;
+}
+
+
+/* Tovar.html css */
+.tovarInCategory .title-box {
+    margin-top: 125px;
+}
+
+.tovarInCategory .title-box h2 {
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.tovars-filter {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.tovars-filter>div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.tovars-filter h3,
+.tovars-filter label {
+    color: var(--txt-black, #282828);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.price-filter input {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    width: 112px;
+    padding: 8px 16px;
+}
+
+.price-filter input::placeholder {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tovarWithSale label {
+    cursor: pointer;
+}
+
+.tovarWithSale input[type="checkbox"] {
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.sorted-tovar select {
+    color: var(--txt-black, #282828);
+    font-size: 16px;
+    padding: 8px 8px 8px 16px;
+    width: 200px;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    height: 36px;
+    font-weight: 500;
+}
+
+.tovars-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 32px;
+    justify-content: space-between;
+}
+
+.tovar-card {
+    width: 316px;
+    border-radius: var(--radius-big, 12px);
+    border: 1px solid var(--grey-divider, #DDD);
+    position: relative;
+}
+
+.tovar-card .tovar-sale span {
+    color: var(--txt-white, #FFF);
+    font-size: 20px;
+    font-weight: 600;
+    top: 1rem;
+    right: 1rem;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    letter-spacing: 0.6px;
+    padding: 4px 8px;
+    z-index: 2;
+    position: absolute;
+}
+
+.tovar-img img {
+    border-radius: var(--radius-big, 12px);
+    width: 314px;
+}
+
+.tovar-info {
+    padding: 20px 32px 32px;
+    gap: 16px;
+}
+
+.tovar-info h4 {
+    overflow: hidden;
+    color: var(--txt-black, #282828);
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tovar-price {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+.tovar-price h2 {
+    color: var(--txt-black, #282828);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.tovar-price span {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tovar-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.tovar-card:hover .tovar-button {
+    bottom: 16px;
+}
+
+.tovar-button {
+    transition: all .3s linear;
+    position: absolute;
+    margin: 0 16px;
+    bottom: -60px;
+    width: 100%;
+}
+
+.tovar-button a {
+    padding: 16px 32px;
+    width: 284px;
+    display: inline-block;
+}
+
+.tovar-button a:hover {
+    border-radius: var(--radius-small, 6px);
+    background: var(--black, #282828);
+}
+
+/* tovar.html css */
+.productBuy .container {
+    display: flex;
+    gap: 32px;
+    margin-top: 188px;
+}
+
+.product-info {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    color: var(--txt-black, #282828);
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.sale-price {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+}
+
+.product-price {
+    display: flex;
+    align-items: end;
+    gap: 2rem;
+}
+
+.product-price h3 {
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.product-price span {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.product-sale {
+    padding: 4px 8px;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+}
+
+.product-sale span {
+    color: var(--txt-white, #FFF);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.product-howMuch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.product-howMuch .productCount {
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+}
+
+.productCount .minus,
+.productCount .plus {
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productCount .minus {
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 0;
+}
+
+.productCount .plus {
+    border: 1px solid #ddd;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.productCount .number {
+    color: var(--txt-black, #282828);
+    text-align: center;
+    font-size: 20px;
+    pointer-events: none;
+    font-weight: 600;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+}
+
+.product-buy__btn button {
+    color: var(--txt-white, #FFF);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    padding: 1rem 2rem;
+    width: 316px;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-description h3 {
+    color: var(--txt-black, #282828);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-description p {
+    overflow: hidden;
+    color: var(--txt-black, #282828);
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 400;
+    width: 548px;
+    line-height: 130%;
+}
+.title-box button{
+    cursor: pointer;
+}
+.product-description a {
+    color: var(--txt-black, #282828);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    text-decoration-line: underline;
 }
