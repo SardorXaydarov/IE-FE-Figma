@@ -411,3 +411,17 @@ body {
     padding: .5rem 1rem;
     display: inline-block;
 }
+
+
+/* Category.html css */
+.category{
+    margin-top: 116px !important;
+}
+.category .categories-card{
+    width: 248px;
+}
+
+.category .categories-card img{
+    width: 248px;
+    height: 274.68px;
+}
