@@ -733,13 +733,262 @@ body {
     width: 548px;
     line-height: 130%;
 }
-.title-box button{
+
+.title-box button {
     cursor: pointer;
 }
+
 .product-description a {
     color: var(--txt-black, #282828);
     font-size: 16px;
     font-weight: 500;
     line-height: 130%;
     text-decoration-line: underline;
+}
+
+
+/* korzina.html styles */
+.shopping-cart .title-box {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-cart .title-box h2 {
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.shopping-cart .title-box button {
+    color: var(--txt-grey, #8B8B8B);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    padding: 8px 16px;
+    position: relative;
+}
+
+.shopping-cart .title-box button::after {
+    width: 700px;
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 172.6px;
+    background: #DDD;
+    height: 1px;
+}
+
+.korzina-productPrice {
+    display: flex;
+    gap: 2rem;
+}
+
+.korzina-products {
+    width: 780px;
+    height: auto;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.korzina-product {
+    width: 780px;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    border-radius: var(--radius-big, 12px);
+    border: 1px solid var(--grey-divider, #DDD);
+    border-left: none;
+}
+
+.korzina-product .korzina-product__info {
+    padding: 2rem 2rem 2rem 0;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+.korzina-product__name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.korzina-product__name h3 {
+    overflow: hidden;
+    color: var(--txt-black, #282828);
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.product-howMuch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.how-much__price {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.korzina-product__price {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+}
+
+.korzina-product__price h2 {
+    color: var(--txt-black, #282828);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.korzina-product__price span {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.how-much__price .productCount {
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    width: 200px;
+}
+
+.productCount .minusTwo,
+.productCount .plusTwo,
+.productCount .minusThree,
+.productCount .plusThree,
+.productCount .minusFour,
+.productCount .plusFour {
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productCount .minusTwo,
+.productCount .minusThree,
+.productCount .minusFour {
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 0;
+}
+
+.productCount .plusTwo,
+.productCount .plusThree,
+.productCount .plusFour {
+    border: 1px solid #ddd;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.productCount .numberTwo,
+.productCount .numberThree,
+.productCount .numberFour {
+    color: var(--txt-black, #282828);
+    text-align: center;
+    font-size: 20px;
+    pointer-events: none;
+    font-weight: 600;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+}
+
+
+.products-total__price {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: var(--radius-big, 12px);
+    width: 100%;
+    background: var(--light-grey, #F1F3F4);
+}
+
+.products-total__price .total-price {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.products-total__price .total-price h3 {
+    color: var(--txt-black, #282828);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.products-total__price .how-many__price h2 {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.products-total__price .how-many__price .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-total__price .how-many__price .price .all-total__price {
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.products-total__price .order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.products-total__price .order-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.products-total__price .order-details form .order-submit {
+    color: var(--txt-white, #FFF);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.products-total__price .order-details form .order-submit:hover{
+    background: var(--green, rgb(23, 114, 23));
+}
+.products-total__price .order-details form .order-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.products-total__price .order-details .order-inputs input {
+    border-radius: var(--radius-small, 6px);
+    width: 100%;
+    border: 1px solid var(--grey-divider, #DDD);
+    background: var(--white, #FFF);
+    padding: 1rem 2rem;
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 20px;
+    font-weight: 500;
 }
