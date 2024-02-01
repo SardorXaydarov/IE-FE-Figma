@@ -177,12 +177,19 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.categoris-cards{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
 
 .categories-card {
     width: 316px;
 }
 
-.categories-cards .categories-card p {
+.categories-cards .categories-card p,
+.categoris-cards .categories-card p
+{
     color: #282828;
     text-align: center;
     font-size: 20px;

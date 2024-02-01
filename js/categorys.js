@@ -23,14 +23,50 @@ try {
     categorys.forEach((categoryCard) => {
         categoryCards.innerHTML += `
     <div class="categories-card">
-    <img src="${categoryCard.img}" alt="categories one img">
-    <p>${categoryCard.categoryName}</p>
-</div>
+        <img src="${categoryCard.img}" alt="categories one img">
+        <p>${categoryCard.categoryName}</p>
+    </div>
     `
     })
 
 } catch (error) {
-    console.log("Error 404");
+}
+
+let categoris = [
+    {
+        img: "images/categories/c1.png",
+        categoryName: 'Fertilizer',
+    },
+    {
+        img: "images/categories/c2.png",
+        categoryName: 'Protective products and septic tanks',
+    },
+    {
+        img: "images/categories/c3.png",
+        categoryName: 'Planting material	',
+    },
+    {
+        img: "images/categories/c4.png",
+        categoryName: 'Tools and equipment',
+    },
+    {
+        img: "images/categories/c5.png",
+        categoryName: 'Pots and planters',
+    },
+]
+
+try {
+    const categorisCards = document.querySelector(".categoris-cards");
+    categoris.forEach((categorisCard) => {
+        categorisCards.innerHTML += `
+        <div class="categories-card">
+            <img src="${categorisCard.img}" alt="categories one img">
+            <p>${categorisCard.categoryName}</p>
+        </div>
+        `
+    })
+} catch (error) {
+
 }
 
 let sales = [
@@ -86,5 +122,85 @@ try {
     `
     })
 } catch (error) {
-    console.log("Qandaydir xato boldi")
+}
+
+
+// All products
+let alltovars = [
+    {
+        sale: "-17%",
+        img: "images/tovars/t1.png",
+        tovarName: "Secateurs",
+        tovarPrice: '$199',
+        oldPrice: "$240",
+    },
+    {
+        sale: "-26%",
+        img: "images/tovars/t2.png",
+        tovarName: "Collection for berries (p...",
+        tovarPrice: '$26',
+        oldPrice: "$35",
+    },
+    {
+        sale: "-36%",
+        img: "images/tovars/t3.png",
+        tovarName: "Gloves (black)",
+        tovarPrice: '$9',
+        oldPrice: "$14",
+    },
+    {
+        img: "images/tovars/t4.png",
+        tovarName: "Sickle-shaped hacksaw",
+        tovarPrice: '$155',
+    },
+    {
+        img: "images/tovars/t5.png",
+        tovarName: "Bayonet shovel",
+        tovarPrice: '$180',
+    },
+    {
+        img: "images/tovars/t6.png",
+        tovarName: "Garden pitchfork",
+        tovarPrice: '$179',
+    },
+    {
+        img: "images/tovars/t7.png",
+        tovarName: "Barbell",
+        tovarPrice: '$12',
+    },
+    {
+        sale: "-18%",
+        img: "images/tovars/t8.png",
+        tovarName: "Souvenir thermometer",
+        tovarPrice: '$98',
+        oldPrice: "$120",
+    },
+]
+try {
+    const tovarsCards = document.querySelector(".tovars-cards");
+    alltovars.forEach((tovarCard) => {
+        tovarsCards.innerHTML += `
+        <div class="tovar-card">
+            <div class="tovar-sale">
+                <span>${tovarCard.sale}</span>
+            </div>
+            <div class="tovar-img">
+                <img src="${tovarCard.img}" alt="tovar first img">
+                <div class="tovar-button">
+                    <a class="btn" href="tovar.html">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="tovar-info">
+                <h4>${tovarCard.tovarName}</h4>
+                <div class="tovar-price">
+                    <h2>${tovarCard.tovarPrice}</h2>
+                    <span><del>${tovarCard.oldPrice}</del></span>
+                </div>
+            </div>
+        </div>
+        `
+    })
+} catch (error) {
+    console.log("404 found")
 }
