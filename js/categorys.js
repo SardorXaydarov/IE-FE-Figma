@@ -149,24 +149,29 @@ let alltovars = [
         oldPrice: "$14",
     },
     {
+        sale: '',
         img: "images/tovars/t4.png",
         tovarName: "Sickle-shaped hacksaw",
         tovarPrice: '$155',
+        oldPrice:"",
     },
     {
         img: "images/tovars/t5.png",
         tovarName: "Bayonet shovel",
         tovarPrice: '$180',
+        oldPrice:"",
     },
     {
         img: "images/tovars/t6.png",
         tovarName: "Garden pitchfork",
         tovarPrice: '$179',
+        oldPrice:"",
     },
     {
         img: "images/tovars/t7.png",
         tovarName: "Barbell",
         tovarPrice: '$12',
+        oldPrice:"",
     },
     {
         sale: "-18%",
