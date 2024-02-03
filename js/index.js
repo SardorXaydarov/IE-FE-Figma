@@ -16,3 +16,7 @@ minus.addEventListener("click", ()=>{
     }
 })
 
+
+
+const button = document.querySelector(".open-modal"),
+    modal =document.querySelector(".modal")

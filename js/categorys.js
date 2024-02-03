@@ -153,25 +153,25 @@ let alltovars = [
         img: "images/tovars/t4.png",
         tovarName: "Sickle-shaped hacksaw",
         tovarPrice: '$155',
-        oldPrice:"",
+        oldPrice: "",
     },
     {
         img: "images/tovars/t5.png",
         tovarName: "Bayonet shovel",
         tovarPrice: '$180',
-        oldPrice:"",
+        oldPrice: "",
     },
     {
         img: "images/tovars/t6.png",
         tovarName: "Garden pitchfork",
         tovarPrice: '$179',
-        oldPrice:"",
+        oldPrice: "",
     },
     {
         img: "images/tovars/t7.png",
         tovarName: "Barbell",
         tovarPrice: '$12',
-        oldPrice:"",
+        oldPrice: "",
     },
     {
         sale: "-18%",
@@ -181,30 +181,31 @@ let alltovars = [
         oldPrice: "$120",
     },
 ]
+
 try {
     const tovarsCards = document.querySelector(".tovars-cards");
     alltovars.forEach((tovarCard) => {
-        tovarsCards.innerHTML += `
-        <div class="tovar-card">
-            <div class="tovar-sale">
-                <span>${tovarCard.sale}</span>
-            </div>
-            <div class="tovar-img">
-                <img src="${tovarCard.img}" alt="tovar first img">
-                <div class="tovar-button">
-                    <a class="btn" href="tovar.html">Add to cart</a>
+            tovarsCards.innerHTML += `
+            <div class="tovar-card">
+                <div class="tovar-sale">
+                    <span>${tovarCard.sale}</span>
+                </div>
+                <div class="tovar-img">
+                    <img src="${tovarCard.img}" alt="tovar first img">
+                    <div class="tovar-button">
+                        <a class="btn" href="tovar.html">Add to cart</a>
+                    </div>
+                </div>
+    
+                <div class="tovar-info">
+                    <h4>${tovarCard.tovarName}</h4>
+                    <div class="tovar-price">
+                        <h2>${tovarCard.tovarPrice}</h2>
+                        <span><del>${tovarCard.oldPrice}</del></span>
+                    </div>
                 </div>
             </div>
-
-            <div class="tovar-info">
-                <h4>${tovarCard.tovarName}</h4>
-                <div class="tovar-price">
-                    <h2>${tovarCard.tovarPrice}</h2>
-                    <span><del>${tovarCard.oldPrice}</del></span>
-                </div>
-            </div>
-        </div>
-        `
+            `
     })
 } catch (error) {
     console.log("404 found")
