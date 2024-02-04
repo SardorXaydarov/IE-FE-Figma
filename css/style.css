@@ -90,7 +90,7 @@ body {
 }
 
 .header {
-    border-bottom: 1px solid var(--grey-divider, #DDD);
+    border-bottom: 1px solid #DDD;
     background: var(--white, #FFF);
 }
 
@@ -177,7 +177,8 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.categoris-cards{
+
+.categoris-cards {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
@@ -188,8 +189,7 @@ body {
 }
 
 .categories-cards .categories-card p,
-.categoris-cards .categories-card p
-{
+.categoris-cards .categories-card p {
     color: #282828;
     text-align: center;
     font-size: 20px;
@@ -246,8 +246,8 @@ body {
     background: transparent;
     color: #FFF;
     font-size: 20px;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--white, #FFF);
+    border-radius: 6px;
+    border: 1px solid #FFF;
     padding: 16px 32px;
     font-weight: 500;
 }
@@ -258,9 +258,9 @@ body {
 
 .register-button button {
     margin-top: 2rem;
-    border-radius: var(--radius-small, 6px);
-    background: var(--white, #FFF);
-    color: var(--txt-black, #282828);
+    border-radius: 6px;
+    background: #FFF;
+    color: #282828;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -272,7 +272,7 @@ body {
 }
 
 .register-button button:hover {
-    background: var(--black, #282828);
+    background: #282828;
     color: #fff;
 }
 
@@ -295,12 +295,12 @@ body {
 }
 
 .sale .title-box button {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 6px;
+    border: 1px solid #DDD;
     padding: 8px 16px;
     position: relative;
 }
@@ -322,15 +322,15 @@ body {
 }
 
 .sale-card {
-    border-radius: var(--radius-big, 12px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 12px;
+    border: 1px solid #DDD;
     width: 316px;
     position: relative;
 }
 
 .sale-card__img img {
-    border-radius: var(--radius-big, 12px);
-    width: 312px;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
 }
 
 .sale-card__info {
@@ -342,7 +342,7 @@ body {
 
 .sale-card__info h3 {
     overflow: hidden;
-    color: var(--txt-black, #282828);
+    color: #282828;
     text-overflow: ellipsis;
     font-size: 20px;
     font-weight: 500;
@@ -355,13 +355,13 @@ body {
 }
 
 .item-price h2 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 40px;
     font-weight: 600;
 }
 
 .item-price span {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 20px;
     font-weight: 500;
     line-height: 130%;
@@ -375,12 +375,12 @@ body {
 }
 
 .sale-card .card-sale span {
-    color: var(--txt-white, #FFF);
+    color: #FFF;
     font-size: 20px;
     font-weight: 600;
     line-height: 130%;
-    border-radius: var(--radius-small, 6px);
-    background: var(--green, #393);
+    border-radius: 6px;
+    background: #393;
     padding: 4px 8px;
     letter-spacing: 0.6px;
 }
@@ -392,20 +392,20 @@ body {
 }
 
 .contact .title-box h1 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 64px;
     font-weight: 700;
 }
 
 .contact .sale-time {
     margin-top: 40px;
-    border-radius: var(--radius-big, 12px);
+    border-radius: 12px;
     background: var(--light-grey, #F1F3F4);
     padding: 32px;
 }
 
 .contact .sale-time h2 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 40px;
     font-weight: 600;
 }
@@ -446,7 +446,7 @@ body {
 }
 
 .tovarInCategory .title-box h2 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 64px;
     font-weight: 700;
 }
@@ -466,23 +466,86 @@ body {
 
 .tovars-filter h3,
 .tovars-filter label {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 20px;
     font-weight: 600;
 }
 
 .price-filter input {
-    color: var(--txt-grey, #8B8B8B);
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
     width: 112px;
-    padding: 8px 16px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+
 }
 
+.tovarWithSale {
+    display: flex;
+}
+
+.tovarWithSale:hover .custom-checkbox {
+    background: #ddd;
+}
+
+.tovarWithSale label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.tovarWithSale input {
+    display: none;
+}
+
+.tovarWithSale input:checked~.custom-checkbox {
+    border-radius: 6px;
+    background: rgb(51, 153, 51);
+}
+
+.tovarWithSale input:checked~.custom-checkbox::after {
+    display: block;
+}
+
+.tovarWithSale .custom-checkbox {
+    width: 36px;
+    height: 36px;
+    transition: all .3s ease;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-checkbox::after {
+    left: 50%;
+    width: 10px;
+    height: 16px;
+    display: none;
+    padding: 6px 4px;
+    border: solid white;
+    left: 34%;
+    top: 6px;
+    border-width: 0px 3px 3px 0;
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    transition: all .3s ease;
+}
+
+/* .price-filter input[type="checkbox"]::after {
+    position: absolute;
+    content: "/f00c";
+} */
+
 .price-filter input::placeholder {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 16px;
     font-weight: 500;
 }
@@ -492,22 +555,27 @@ body {
 }
 
 .tovarWithSale input[type="checkbox"] {
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 6px;
+    border: 1px solid #DDD;
     width: 36px;
     height: 36px;
     cursor: pointer;
 }
 
 .sorted-tovar select {
-    color: var(--txt-black, #282828);
-    font-size: 16px;
-    padding: 8px 8px 8px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    padding: 8px 16px;
     width: 200px;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
-    height: 36px;
+}
+
+.sorted-tovar select option {
+    color: rgb(40, 40, 40);
+    font-size: 16px;
     font-weight: 500;
+    text-align: left;
+    background: #fff;
 }
 
 .tovars-cards {
@@ -520,19 +588,19 @@ body {
 
 .tovar-card {
     width: 316px;
-    border-radius: var(--radius-big, 12px);
-    border: 1px solid var(--grey-divider, #DDD);
-    position: relative;
+    border-radius: 12px;
+    width: 320px;
+    border: 1px solid #DDD;
 }
 
 .tovar-card .tovar-sale span {
-    color: var(--txt-white, #FFF);
+    color: #FFF;
     font-size: 20px;
     font-weight: 600;
     top: 1rem;
     right: 1rem;
-    border-radius: var(--radius-small, 6px);
-    background: var(--green, #393);
+    border-radius: 6px;
+    background: #393;
     letter-spacing: 0.6px;
     padding: 4px 8px;
     z-index: 2;
@@ -540,8 +608,7 @@ body {
 }
 
 .tovar-img img {
-    border-radius: var(--radius-big, 12px);
-    width: 314px;
+    width: 100%;
 }
 
 .tovar-info {
@@ -551,7 +618,7 @@ body {
 
 .tovar-info h4 {
     overflow: hidden;
-    color: var(--txt-black, #282828);
+    color: #282828;
     text-overflow: ellipsis;
     font-size: 20px;
     font-weight: 500;
@@ -564,13 +631,13 @@ body {
 }
 
 .tovar-price h2 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 40px;
     font-weight: 600;
 }
 
 .tovar-price span {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 20px;
     font-weight: 500;
 }
@@ -599,8 +666,8 @@ body {
 }
 
 .tovar-button a:hover {
-    border-radius: var(--radius-small, 6px);
-    background: var(--black, #282828);
+    border-radius: 6px;
+    background: #282828;
 }
 
 /* tovar.html css */
@@ -617,7 +684,7 @@ body {
 }
 
 .product-info h3 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -636,25 +703,25 @@ body {
 }
 
 .product-price h3 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 64px;
     font-weight: 700;
 }
 
 .product-price span {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 40px;
     font-weight: 500;
 }
 
 .product-sale {
     padding: 4px 8px;
-    border-radius: var(--radius-small, 6px);
-    background: var(--green, #393);
+    border-radius: 6px;
+    background: #393;
 }
 
 .product-sale span {
-    color: var(--txt-white, #FFF);
+    color: #FFF;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.6px;
@@ -671,8 +738,8 @@ body {
 .product-howMuch .productCount {
     display: flex;
     align-items: center;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 6px;
+    border: 1px solid #DDD;
 }
 
 .productCount .minus,
@@ -696,7 +763,7 @@ body {
 }
 
 .productCount .number {
-    color: var(--txt-black, #282828);
+    color: #282828;
     text-align: center;
     font-size: 20px;
     pointer-events: none;
@@ -709,12 +776,12 @@ body {
 }
 
 .product-buy__btn button {
-    color: var(--txt-white, #FFF);
+    color: #FFF;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
-    border-radius: var(--radius-small, 6px);
-    background: var(--green, #393);
+    border-radius: 6px;
+    background: #393;
     padding: 1rem 2rem;
     width: 316px;
 }
@@ -726,14 +793,14 @@ body {
 }
 
 .product-description h3 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 20px;
     font-weight: 600;
 }
 
 .product-description p {
     overflow: hidden;
-    color: var(--txt-black, #282828);
+    color: #282828;
     text-overflow: ellipsis;
     font-size: 16px;
     font-weight: 400;
@@ -746,7 +813,7 @@ body {
 }
 
 .product-description a {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 16px;
     font-weight: 500;
     line-height: 130%;
@@ -763,18 +830,18 @@ body {
 }
 
 .shopping-cart .title-box h2 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 64px;
     font-weight: 700;
 }
 
 .shopping-cart .title-box button {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 6px;
+    border: 1px solid #DDD;
     padding: 8px 16px;
     position: relative;
 }
@@ -807,8 +874,8 @@ body {
     display: flex;
     gap: 2rem;
     justify-content: space-between;
-    border-radius: var(--radius-big, 12px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 12px;
+    border: 1px solid #DDD;
     border-left: none;
 }
 
@@ -827,7 +894,7 @@ body {
 
 .korzina-product__name h3 {
     overflow: hidden;
-    color: var(--txt-black, #282828);
+    color: #282828;
     text-overflow: ellipsis;
     font-size: 20px;
     font-weight: 500;
@@ -854,13 +921,13 @@ body {
 }
 
 .korzina-product__price h2 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 40px;
     font-weight: 600;
 }
 
 .korzina-product__price span {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 20px;
     font-weight: 500;
 }
@@ -868,8 +935,8 @@ body {
 .how-much__price .productCount {
     display: flex;
     align-items: center;
-    border-radius: var(--radius-small, 6px);
-    border: 1px solid var(--grey-divider, #DDD);
+    border-radius: 6px;
+    border: 1px solid #DDD;
     width: 200px;
 }
 
@@ -904,7 +971,7 @@ body {
 .productCount .numberTwo,
 .productCount .numberThree,
 .productCount .numberFour {
-    color: var(--txt-black, #282828);
+    color: #282828;
     text-align: center;
     font-size: 20px;
     pointer-events: none;
@@ -922,7 +989,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-radius: var(--radius-big, 12px);
+    border-radius: 12px;
     width: 100%;
     background: var(--light-grey, #F1F3F4);
 }
@@ -934,13 +1001,13 @@ body {
 }
 
 .products-total__price .total-price h3 {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 40px;
     font-weight: 700;
 }
 
 .products-total__price .how-many__price h2 {
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 40px;
     font-weight: 500;
 }
@@ -952,7 +1019,7 @@ body {
 }
 
 .products-total__price .how-many__price .price .all-total__price {
-    color: var(--txt-black, #282828);
+    color: #282828;
     font-size: 64px;
     font-weight: 700;
 }
@@ -970,19 +1037,21 @@ body {
 }
 
 .products-total__price .order-details form .order-submit {
-    color: var(--txt-white, #FFF);
+    color: #FFF;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
-    border-radius: var(--radius-small, 6px);
-    background: var(--green, #393);
+    border-radius: 6px;
+    background: #393;
     padding: 1rem 2rem;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
-.products-total__price .order-details form .order-submit:hover{
-    background: var(--green, rgb(23, 114, 23));
+
+.products-total__price .order-details form .order-submit:hover {
+    background: rgb(3, 114, 23);
 }
+
 .products-total__price .order-details form .order-inputs {
     display: flex;
     flex-direction: column;
@@ -990,18 +1059,18 @@ body {
 }
 
 .products-total__price .order-details .order-inputs input {
-    border-radius: var(--radius-small, 6px);
+    border-radius: 6px;
     width: 100%;
-    border: 1px solid var(--grey-divider, #DDD);
+    border: 1px solid #DDD;
     background: var(--white, #FFF);
     padding: 1rem 2rem;
-    color: var(--txt-grey, #8B8B8B);
+    color: #8B8B8B;
     font-size: 20px;
     font-weight: 500;
 }
 
 
-.open-modal{
+.open-modal {
     color: #fff;
     cursor: pointer;
     justify-content: center;
@@ -1011,8 +1080,8 @@ body {
     border-radius: 6px;
 }
 
-.modal{
-    background: rgba(0,0,0,0.4);
+.modal {
+    background: rgba(0, 0, 0, 0.4);
     min-width: 100%;
     min-height: 100%;
 

@@ -66,7 +66,7 @@ try {
         `
     })
 } catch (error) {
-
+    console.log("error 404 found");
 }
 
 let sales = [
@@ -122,6 +122,7 @@ try {
     `
     })
 } catch (error) {
+    console.log("error 404 found");
 }
 
 
@@ -185,7 +186,7 @@ let alltovars = [
 try {
     const tovarsCards = document.querySelector(".tovars-cards");
     alltovars.forEach((tovarCard) => {
-            tovarsCards.innerHTML += `
+        tovarsCards.innerHTML += `
             <div class="tovar-card">
                 <div class="tovar-sale">
                     <span>${tovarCard.sale}</span>
@@ -209,4 +210,81 @@ try {
     })
 } catch (error) {
     console.log("404 found")
+}
+
+
+
+//shopping cart
+let cartProducts = [
+    {
+        img: "images/korzina/k1.png",
+        productName: "Secateurs",
+        productPrice: 155,
+        productOldPrice: 240,
+    },
+    {
+        img: "images/korzina/k2.png",
+        productName: "Collection for berries (plastic)",
+        productPrice: 26,
+        productOldPrice: 35,
+    },
+    {
+        img: "images/korzina/k3.png",
+        productName: "Bayonet shovel",
+        productPrice: 360,
+        productOldPrice: "",
+    },
+]
+
+
+try {
+    const korzinaProducts = document.querySelector(".korzina-products")
+    cartProducts.forEach((korzinaProduct) => {
+        korzinaProducts.innerHTML += `
+        <div class="korzina-product">
+                                    <div class="korzina-product__img">
+                                        <img src="${korzinaProduct.img}" alt="korzina-product-1">
+                                    </div>
+                                    <div class="korzina-product__info">
+                                        <div class="korzina-product__name">
+                                            <h3>${korzinaProduct.productName}</h3>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 6L6 18" stroke="#282828" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6 6L18 18" stroke="#282828" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="how-much__price">
+                                            <div class="productCount">
+                                                <span class="minusTwo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none">
+                                                        <path d="M5 12H19" stroke="#8B8B8B" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="numberTwo">1</span>
+                                                <span class="plusTwo">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none">
+                                                        <path d="M5 12H19" stroke="#8B8B8B" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M12 5V19" stroke="#8B8B8B" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="korzina-product__price">
+                                                <h2>$${korzinaProduct.productPrice}</h2>
+                                                <span><del>$${korzinaProduct.productOldPrice}</del></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        `
+    })
+} catch (error) {
+    console.log(error);
 }
