@@ -589,6 +589,7 @@ body {
 .tovar-card {
     width: 316px;
     border-radius: 12px;
+    position: relative;
     width: 320px;
     border: 1px solid #DDD;
 }

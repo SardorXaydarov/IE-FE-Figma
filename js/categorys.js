@@ -161,18 +161,21 @@ let alltovars = [
         tovarName: "Bayonet shovel",
         tovarPrice: '$180',
         oldPrice: "",
+        sale: "",
     },
     {
         img: "images/tovars/t6.png",
         tovarName: "Garden pitchfork",
         tovarPrice: '$179',
         oldPrice: "",
+        sale: "",
     },
     {
         img: "images/tovars/t7.png",
         tovarName: "Barbell",
         tovarPrice: '$12',
         oldPrice: "",
+        sale: "",
     },
     {
         sale: "-18%",
