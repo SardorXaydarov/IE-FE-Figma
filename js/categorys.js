@@ -150,32 +150,24 @@ let alltovars = [
         oldPrice: "$14",
     },
     {
-        sale: '',
         img: "images/tovars/t4.png",
         tovarName: "Sickle-shaped hacksaw",
         tovarPrice: '$155',
-        oldPrice: "",
     },
     {
         img: "images/tovars/t5.png",
         tovarName: "Bayonet shovel",
         tovarPrice: '$180',
-        oldPrice: "",
-        sale: "",
     },
     {
         img: "images/tovars/t6.png",
         tovarName: "Garden pitchfork",
         tovarPrice: '$179',
-        oldPrice: "",
-        sale: "",
     },
     {
         img: "images/tovars/t7.png",
         tovarName: "Barbell",
         tovarPrice: '$12',
-        oldPrice: "",
-        sale: "",
     },
     {
         sale: "-18%",
@@ -192,7 +184,11 @@ try {
         tovarsCards.innerHTML += `
             <div class="tovar-card">
                 <div class="tovar-sale">
-                    <span>${tovarCard.sale}</span>
+                    ${tovarCard.sale
+                ?
+                `<span>${tovarCard.sale}</span>`
+                : ''
+            }
                 </div>
                 <div class="tovar-img">
                     <img src="${tovarCard.img}" alt="tovar first img">
@@ -205,7 +201,7 @@ try {
                     <h4>${tovarCard.tovarName}</h4>
                     <div class="tovar-price">
                         <h2>${tovarCard.tovarPrice}</h2>
-                        <span><del>${tovarCard.oldPrice}</del></span>
+                        ${tovarCard.oldPrice ? `<span><del>${tovarCard.oldPrice}</del></span>` : ''}
                     </div>
                 </div>
             </div>
@@ -281,7 +277,7 @@ try {
                                             </div>
                                             <div class="korzina-product__price">
                                                 <h2>$${korzinaProduct.productPrice}</h2>
-                                                <span><del>$${korzinaProduct.productOldPrice}</del></span>
+                                                ${korzinaProduct.productOldPrice ? `<span><del>$${korzinaProduct.productOldPrice}</del></span>` : ''}
                                             </div>
                                         </div>
                                     </div>
